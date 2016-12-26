@@ -1,0 +1,10 @@
+{% extends "./layout/layout.html" %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

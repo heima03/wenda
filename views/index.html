@@ -1,0 +1,838 @@
+{% extends "./layout/layout.html" %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+<div class="aw-container-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="aw-content-wrap clearfix">
+        <div class="col-sm-12 col-md-9 aw-main-content">
+          <!-- 新消息通知 -->
+          <div class="aw-mod aw-notification-box hide" id="index_notification">
+            <div class="mod-head common-head">
+              <h2>
+              <span class="pull-right"><a href="http://wenda.golaravel.com/setting/privacy/#notifications" class="text-color-999"><i class="icon icon-setting"></i> 通知设置</a></span>
+              <i class="icon icon-bell"></i>新通知<em class="badge badge-important" name="notification_unread_num"></em>
+            </h2>
+            </div>
+            <div class="mod-body">
+              <ul id="notification_list"></ul>
+            </div>
+            <div class="mod-footer clearfix">
+              <a href="javascript:;" onclick="AWS.Message.read_notification(false, 0, false);" class="pull-left btn btn-mini btn-gray">我知道了</a>
+              <a href="http://wenda.golaravel.com/notifications/" class="pull-right btn btn-mini btn-success">查看所有</a>
+            </div>
+          </div>
+          <!-- end 新消息通知 -->
+          <!-- tab切换 -->
+          <ul class="nav nav-tabs aw-nav-tabs active hidden-xs">
+            <li><a href="http://wenda.golaravel.com/sort_type-unresponsive">等待回复</a></li>
+            <li><a href="http://wenda.golaravel.com/sort_type-hot__day-7" id="sort_control_hot">热门</a></li>
+            <li><a href="http://wenda.golaravel.com/is_recommend-1">推荐</a></li>
+            <li class="active"><a href="">最新</a></li>
+            <h2 class="hidden-xs"><i class="icon icon-list"></i> 发现</h2>
+          </ul>
+          <!-- end tab切换 -->
+          <div class="aw-mod aw-explore-list">
+            <div class="mod-body">
+              <div class="aw-common-list">
+                <div class="aw-item article" data-topic-id="1159,">
+                  <a class="aw-user-name hidden-xs" data-id="3675" href="http://wenda.golaravel.com/people/peng" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/36/75_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/article/337">使用 Node 开发文档社区是怎样一种体验</a>
+        </h4>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/peng" class="aw-user-name">peng</a> <span class="text-color-999">发表了文章 • 0 个评论 • 14 次浏览 • 4 小时前</span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item article" data-topic-id="1159,">
+                  <a class="aw-user-name hidden-xs" data-id="3675" href="http://wenda.golaravel.com/people/peng" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/36/75_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/article/336">北京三年“治霾”投入360亿，大数据告诉你效果怎么样</a>
+        </h4>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/peng" class="aw-user-name">peng</a> <span class="text-color-999">发表了文章 • 0 个评论 • 12 次浏览 • 4 小时前</span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="1159,">
+                  <a class="aw-user-name hidden-xs" data-id="3675" href="http://wenda.golaravel.com/people/peng" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/36/75_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2375">特朗普会请普京吗</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2375#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/peng" class="aw-user-name">peng</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 14 次浏览 • 4 小时前 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item article" data-topic-id="1159,3,">
+                  <a class="aw-user-name hidden-xs" data-id="3675" href="http://wenda.golaravel.com/people/peng" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/36/75_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/article/335">普京：特朗普若请我访美，我当然会去</a>
+        </h4>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/peng" class="aw-user-name">peng</a> <span class="text-color-999">发表了文章 • 5 个评论 • 15 次浏览 • 4 小时前</span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="1091,69,47,">
+                  <a class="aw-user-name hidden-xs" data-id="4242" href="http://wenda.golaravel.com/people/HYB" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2199">laravel 5.2 redis 不允许静态调用</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5611" href="http://wenda.golaravel.com/people/_H" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/56/11_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/_H" class="aw-user-name" data-id="5611">_H</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 574 次浏览 • 22 小时前       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="47,">
+                  <a class="aw-user-name hidden-xs" data-id="5611" href="http://wenda.golaravel.com/people/_H" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/56/11_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2374">Redis  怎么 用事物multi ？</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2374#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/_H" class="aw-user-name">_H</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 13 次浏览 • 22 小时前 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="748,">
+                  <a class="aw-user-name hidden-xs" data-id="5610" href="http://wenda.golaravel.com/people/%E6%BB%A1%E5%85%B4%E6%B1%9F" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2373">写php几年了，突然来看laraval，怎么感觉好难哦！还什么排名第一，真心感觉有点太假了！</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2373#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E6%BB%A1%E5%85%B4%E6%B1%9F" class="aw-user-name">满兴江</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 69 次浏览 • 1 天前 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="983,">
+                  <a class="aw-user-name hidden-xs" data-id="5608" href="http://wenda.golaravel.com/people/%E7%B1%B3%E6%B6%9B" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/56/08_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2372">做一个给淘宝一样的搜索功能，任何条件搜索都可以</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5609" href="http://wenda.golaravel.com/people/dddddd" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/56/09_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/dddddd" class="aw-user-name" data-id="5609">dddddd</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 45 次浏览 • 1 天前        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="201,114,153,57,">
+                  <a class="aw-user-name hidden-xs" data-id="1825" href="http://wenda.golaravel.com/people/%E9%A3%9E%E7%BF%94%E7%9A%84%E5%B0%8F%E7%8C%AA" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/18/25_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1437">laravel怎么自动加载Model和一些常用的类</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="488" href="http://wenda.golaravel.com/people/Mr_Jing" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/04/88_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="554" href="http://wenda.golaravel.com/people/mrlian" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/05/54_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/Lane" class="aw-user-name" data-id="5607">Lane</a>
+                      <span class="text-color-999">回复了问题 • 5 人关注 • 5 个回复 • 5299 次浏览 • 1 天前        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item article" data-topic-id="1156,1157,748,1158,">
+                  <a class="aw-user-name hidden-xs" data-id="5517" href="http://wenda.golaravel.com/people/qingfengxulai" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/article/334">收藏这些，据说一年能省好几万~</a>
+        </h4>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/qingfengxulai" class="aw-user-name">qingfengxulai</a> <span class="text-color-999">发表了文章 • 0 个评论 • 136 次浏览 • 3 天前</span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="972,">
+                  <a class="aw-user-name hidden-xs" data-id="2295" href="http://wenda.golaravel.com/people/mackcoding" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1657">composer安装doctrine/dbal</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5595" href="http://wenda.golaravel.com/people/GorillaR" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/95_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/GorillaR" class="aw-user-name" data-id="5595">GorillaR</a>
+                      <span class="text-color-999">回复了问题 • 3 人关注 • 1 个回复 • 1621 次浏览 • 4 天前        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="1155,">
+                  <a class="aw-user-name hidden-xs" data-id="4823" href="http://wenda.golaravel.com/people/qq1291061979" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2371">你们没人用sae了吗</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2371#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/qq1291061979" class="aw-user-name">qq1291061979</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 57 次浏览 • 5 天前 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="859,860,">
+                  <a class="aw-user-name hidden-xs" data-id="1812" href="http://wenda.golaravel.com/people/%E5%85%88%E7%94%9F" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1405">sae上部署laravel5.1</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="4823" href="http://wenda.golaravel.com/people/qq1291061979" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/qq1291061979" class="aw-user-name" data-id="4823">qq1291061979</a>
+                      <span class="text-color-999">回复了问题 • 3 人关注 • 1 个回复 • 1166 次浏览 • 5 天前        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="697,">
+                  <a class="aw-user-name hidden-xs" data-id="1430" href="http://wenda.golaravel.com/people/gaohui_happy" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/998">laravel 5 文件上传问题 （问题太多了）</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="753" href="http://wenda.golaravel.com/people/shellus" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/07/53_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="4726" href="http://wenda.golaravel.com/people/%E8%8B%8F%E5%9D%A1%E4%B8%B6" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/leedaning" class="aw-user-name" data-id="1561">leedaning</a>
+                      <span class="text-color-999">回复了问题 • 4 人关注 • 6 个回复 • 11333 次浏览 • 5 天前       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="198,199,57,">
+                  <a class="aw-user-name hidden-xs" data-id="2" href="http://wenda.golaravel.com/people/wangsai" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/00/02_avatar_max.jpg" alt="" /><i class="icon icon-v"></i></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/231">推荐一个Laravel大牛写的CMS系统，代码非常值得研究！</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="2266" href="http://wenda.golaravel.com/people/dongyou" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/22/66_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="2369" href="http://wenda.golaravel.com/people/%E8%AF%B7%E5%8F%AB%E6%88%91%E9%9B%B7%E9%94%8B%E5%90%8C%E5%BF%97" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/dmxl" class="aw-user-name" data-id="5573">dmxl</a>
+                      <span class="text-color-999">回复了问题 • 36 人关注 • 23 个回复 • 16873 次浏览 • 5 天前       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="131,">
+                  <a class="aw-user-name hidden-xs" data-id="5573" href="http://wenda.golaravel.com/people/dmxl" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/73_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2370">能否增加API提示更新</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2370#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/dmxl" class="aw-user-name">dmxl</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 36 次浏览 • 5 天前 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="24,">
+                  <a class="aw-user-name hidden-xs" data-id="5538" href="http://wenda.golaravel.com/people/honfei" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2362">composer中国镜像这几天没有同步了？</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5533" href="http://wenda.golaravel.com/people/zhwei" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/33_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="2" href="http://wenda.golaravel.com/people/wangsai" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/00/02_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/wangsai" class="aw-user-name" data-id="2">王赛</a>
+                      <span class="text-color-999">回复了问题 • 3 人关注 • 4 个回复 • 173 次浏览 • 2016-12-16 02:21       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="866,">
+                  <a class="aw-user-name hidden-xs" data-id="5570" href="http://wenda.golaravel.com/people/%E5%B1%B1%E4%B8%9C%E5%B0%8F%E5%AE%87" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/70_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2369">找人用laravel开发，有时间做过高请求计算的联系我价格1万5</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2369#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E5%B1%B1%E4%B8%9C%E5%B0%8F%E5%AE%87" class="aw-user-name">山东小宇</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 192 次浏览 • 2016-12-14 21:54 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="285,">
+                  <a class="aw-user-name hidden-xs" data-id="5565" href="http://wenda.golaravel.com/people/%E5%9C%A8%E8%B7%AF%E4%B8%8Alumen" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/65_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2368">安装完运行报错 哪位大神帮忙看一下 谢谢</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5569" href="http://wenda.golaravel.com/people/erik" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/69_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/erik" class="aw-user-name" data-id="5569">艾瑞可</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 80 次浏览 • 2016-12-14 17:58        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="60,">
+                  <a class="aw-user-name hidden-xs" data-id="5544" href="http://wenda.golaravel.com/people/%E4%B8%80%E7%9B%B4%E5%88%B0%E6%9C%80%E5%90%8E" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/44_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2367">请问laravel中的ORM中的多对一关系怎么写的？</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2367#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E4%B8%80%E7%9B%B4%E5%88%B0%E6%9C%80%E5%90%8E" class="aw-user-name">一直到最后</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 95 次浏览 • 2016-12-13 17:38 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="57,">
+                  <a class="aw-user-name hidden-xs" data-id="5539" href="http://wenda.golaravel.com/people/%E6%B5%81%E6%B0%B4%E6%97%A0%E7%97%95_Axios" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2363">使用laravel默认方式加密之后，在ios客户端如何解密？</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2363#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E6%B5%81%E6%B0%B4%E6%97%A0%E7%97%95_Axios" class="aw-user-name" data-id="5539">流水无痕_Axios</a>
+                      <span class="text-color-999">回复了问题 • 1 人关注 • 1 个回复 • 113 次浏览 • 2016-12-13 09:37       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="157,">
+                  <a class="aw-user-name hidden-xs" data-id="5485" href="http://wenda.golaravel.com/people/%E7%85%9C%E5%AF%92" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/54/85_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2366">为什么laravel中input使用提示未定义的类</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2366#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E7%85%9C%E5%AF%92" class="aw-user-name">煜寒</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 55 次浏览 • 2016-12-12 21:27 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="16,165,118,">
+                  <a class="aw-user-name hidden-xs" data-id="2" href="http://wenda.golaravel.com/people/wangsai" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/00/02_avatar_max.jpg" alt="" /><i class="icon icon-v"></i></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1508">Composer/Packagist 中国全量镜像重装上阵，晒一下 composer install 的速度吧</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="587" href="http://wenda.golaravel.com/people/%E9%98%BF%E7%86%8A" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                      <a class="aw-user-name" data-id="2096" href="http://wenda.golaravel.com/people/Linkdesu" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/Linkdesu" class="aw-user-name" data-id="2096">Linkdesu</a>
+                      <span class="text-color-999">回复了问题 • 24 人关注 • 27 个回复 • 8180 次浏览 • 2016-12-12 17:34        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="95,">
+                  <a class="aw-user-name hidden-xs" data-id="5554" href="http://wenda.golaravel.com/people/%E9%BB%84%E6%B2%99%E5%8B%87%E5%A3%AB" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/54_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2365">Laravel ORM 数据model操作 怎么写 like 查询?</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="1909" href="http://wenda.golaravel.com/people/digitalpro" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/19/09_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/digitalpro" class="aw-user-name" data-id="1909">digitalpro</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 88 次浏览 • 2016-12-12 17:18        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="3,">
+                  <a class="aw-user-name hidden-xs" data-id="5243" href="http://wenda.golaravel.com/people/%E6%83%B3%E7%9D%A1%E4%B8%AA%E5%A5%BD%E8%A7%89" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/52/43_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2326">关于laravel where语句的 模糊查询</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="1362" href="http://wenda.golaravel.com/people/%E7%8C%B4%E5%AD%90%E7%9C%9F%E7%9A%84%E4%BC%9A%E5%81%B7%E6%A1%83" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E7%8C%B4%E5%AD%90%E7%9C%9F%E7%9A%84%E4%BC%9A%E5%81%B7%E6%A1%83" class="aw-user-name" data-id="1362">猴子真的会偷桃</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 314 次浏览 • 2016-12-11 11:51       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="1050,">
+                  <a class="aw-user-name hidden-xs" data-id="3396" href="http://wenda.golaravel.com/people/laravelwy" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1948">laravel5.1如何访问别人提供的API接口？</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5303" href="http://wenda.golaravel.com/people/%E5%9C%A8%E9%A3%98%E9%9B%AA%E7%9A%84%E5%AD%A3%E8%8A%82" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/53/03_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="5319" href="http://wenda.golaravel.com/people/%E6%98%A8%E6%97%A5%E6%98%9F%E6%9C%9F%E5%85%AB" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E7%8C%B4%E5%AD%90%E7%9C%9F%E7%9A%84%E4%BC%9A%E5%81%B7%E6%A1%83" class="aw-user-name" data-id="1362">猴子真的会偷桃</a>
+                      <span class="text-color-999">回复了问题 • 5 人关注 • 3 个回复 • 1373 次浏览 • 2016-12-11 11:49        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="1091,1051,60,">
+                  <a class="aw-user-name hidden-xs" data-id="5544" href="http://wenda.golaravel.com/people/%E4%B8%80%E7%9B%B4%E5%88%B0%E6%9C%80%E5%90%8E" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/44_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2364">报错求指教 ：array_merge(): Argument #2 is not an array</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2364#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E4%B8%80%E7%9B%B4%E5%88%B0%E6%9C%80%E5%90%8E" class="aw-user-name">一直到最后</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 62 次浏览 • 2016-12-10 11:37 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="8,">
+                  <a class="aw-user-name hidden-xs" data-id="196" href="http://wenda.golaravel.com/people/kehao" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/01/96_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/58">laravel书籍有吗？</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="163" href="http://wenda.golaravel.com/people/summer" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/01/63_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="60" href="http://wenda.golaravel.com/people/xiaobeicn" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/00/60_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/summer" class="aw-user-name" data-id="163">summer</a>
+                      <span class="text-color-999">回复了问题 • 5 人关注 • 5 个回复 • 2781 次浏览 • 2016-12-09 09:29        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="263,">
+                  <a class="aw-user-name hidden-xs" data-id="5530" href="http://wenda.golaravel.com/people/Charlie" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/30_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2361">如何实现长活对象</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2361#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/Charlie" class="aw-user-name">Charlie</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 76 次浏览 • 2016-12-07 18:07 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="780,1051,">
+                  <a class="aw-user-name hidden-xs" data-id="2388" href="http://wenda.golaravel.com/people/zhengmin4516" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2360">控制台突然不报错了，命令输错一点反应都没有</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2360#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/zhengmin4516" class="aw-user-name">zhengmin4516</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 75 次浏览 • 2016-12-07 17:34 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="163,167,756,">
+                  <a class="aw-user-name hidden-xs" data-id="1599" href="http://wenda.golaravel.com/people/lyz19940727" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1092">Laravel 5 如何连接上mongodb </a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="4787" href="http://wenda.golaravel.com/people/%E9%9D%92%E5%9F%8E%E6%A2%A6%E8%BF%9C" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/47/87_avatar_mid.jpg" alt="" /></a>
+                      <a class="aw-user-name" data-id="5529" href="http://wenda.golaravel.com/people/%E5%8F%B3%E8%80%B3" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/29_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E5%8F%B3%E8%80%B3" class="aw-user-name" data-id="5529">右耳</a>
+                      <span class="text-color-999">回复了问题 • 7 人关注 • 6 个回复 • 6930 次浏览 • 2016-12-07 11:49        </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="780,">
+                  <a class="aw-user-name hidden-xs" data-id="5521" href="http://wenda.golaravel.com/people/Czi" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/21_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2359">linux下报错Fatal error: Uncaught Error: Call to a member function make() on integer in</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2359#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/Czi" class="aw-user-name">Czi</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 64 次浏览 • 2016-12-05 17:50 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="783,">
+                  <a class="aw-user-name hidden-xs" data-id="5518" href="http://wenda.golaravel.com/people/%E8%BF%B7%E8%8C%AB" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/18_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2358">'Class 'Memcached' not found</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2358#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E8%BF%B7%E8%8C%AB" class="aw-user-name">迷茫</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 60 次浏览 • 2016-12-05 14:31 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="1153,1154,57,133,">
+                  <a class="aw-user-name hidden-xs" data-id="3711" href="http://wenda.golaravel.com/people/%E7%9C%8B%E8%90%BD%E4%BA%86%E6%B2%A7%E6%A1%91" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/37/11_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2357">laravel在nginx下的伪静态配置，运行环境：wnmp2.2.5/win7sp1旗舰版</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2357#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E7%9C%8B%E8%90%BD%E4%BA%86%E6%B2%A7%E6%A1%91" class="aw-user-name" data-id="3711">看落了沧桑</a>
+                      <span class="text-color-999">回复了问题 • 1 人关注 • 1 个回复 • 106 次浏览 • 2016-12-04 21:08       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="922,496,">
+                  <a class="aw-user-name hidden-xs" data-id="1751" href="http://wenda.golaravel.com/people/payne" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/17/51_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/1509">laravel中间件注册问题</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="5508" href="http://wenda.golaravel.com/people/lenny" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/08_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/lenny" class="aw-user-name" data-id="5508">lenny</a>
+                      <span class="text-color-999">回复了问题 • 2 人关注 • 1 个回复 • 895 次浏览 • 2016-12-03 11:40       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="797,">
+                  <a class="aw-user-name hidden-xs" data-id="5506" href="http://wenda.golaravel.com/people/O2O%E6%A3%92" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/06_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2356">柒月柒甘瑞团队的客户想咨询用棒女郎之后，真的可以改善女性妇科病情吗？</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2356#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/O2O%E6%A3%92" class="aw-user-name">O2O棒</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 80 次浏览 • 2016-12-03 10:28 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="305,">
+                  <a class="aw-user-name hidden-xs" data-id="5500" href="http://wenda.golaravel.com/people/%E9%99%B6%E7%90%B4" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/55/00_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2355">octobercms命令行安装</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2355#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E9%99%B6%E7%90%B4" class="aw-user-name">陶琴</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 70 次浏览 • 2016-12-02 11:00 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="57,">
+                  <a class="aw-user-name hidden-xs" data-id="5499" href="http://wenda.golaravel.com/people/%E8%8E%B9%E5%84%BFhen" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/54/99_avatar_max.jpg" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2354">laravel链接不上线上数据库，但是我如果用原生PDO就可以连上。</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2354#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E8%8E%B9%E5%84%BFhen" class="aw-user-name">莹儿hen</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 107 次浏览 • 2016-12-02 10:37 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item active" data-topic-id="113,">
+                  <a class="aw-user-name hidden-xs" data-id="5489" href="http://wenda.golaravel.com/people/%E8%A2%81__%E5%B0%8F%E5%85%AD" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2353">关于route的问题？</a>
+        </h4>
+                    <a href="http://wenda.golaravel.com/question/2353#!answer_form" class="pull-right text-color-999">回复</a>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E8%A2%81__%E5%B0%8F%E5%85%AD" class="aw-user-name">袁__小六</a>
+                      <span class="text-color-999">发起了问题 • 1 人关注 • 0 个回复 • 97 次浏览 • 2016-12-01 16:50 
+      </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="aw-item " data-topic-id="415,">
+                  <a class="aw-user-name hidden-xs" data-id="4930" href="http://wenda.golaravel.com/people/%E5%A4%A7%E9%81%93%E5%A6%82%E9%9D%92%E5%A4%A9" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-max-img.png" alt="" /></a>
+                  <div class="aw-question-content">
+                    <h4>
+          <a href="http://wenda.golaravel.com/question/2266">laravel5.2 跳转页面时怎么给个提示</a>
+        </h4>
+                    <div class="pull-right hidden-xs contribute">
+                      <span class="pull-right text-color-999">贡献</span>
+                      <a class="aw-user-name" data-id="4955" href="http://wenda.golaravel.com/people/%E6%B0%B8%E8%BF%9C%E7%B2%BE%E5%BD%A9" rel="nofollow"><img src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" alt="" /></a>
+                      <a class="aw-user-name" data-id="3675" href="http://wenda.golaravel.com/people/peng" rel="nofollow"><img src="http://wenda.golaravel.com/uploads/avatar/000/00/36/75_avatar_mid.jpg" alt="" /></a>
+                    </div>
+                    <p>
+                      <a href="http://wenda.golaravel.com/people/%E7%85%9C%E5%AF%92" class="aw-user-name" data-id="5485">煜寒</a>
+                      <span class="text-color-999">回复了问题 • 4 人关注 • 4 个回复 • 517 次浏览 • 2016-11-30 16:54       </span>
+                      <span class="text-color-999 related-topic hide"> •  来自相关话题</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mod-footer">
+              <div class="page-control">
+                <ul class="pagination pull-right">
+                  <li class="active"><a href="javascript:;">1</a></li>
+                  <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-2">2</a></li>
+                  <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-3">3</a></li>
+                  <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-4">4</a></li>
+                  <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-2">&gt;</a></li>
+                  <li><a href="http://wenda.golaravel.com/sort_type-new__day-0__is_recommend-0__page-52">&gt;&gt;</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 侧边栏 -->
+        <div class="col-sm-12 col-md-3 aw-side-bar hidden-xs hidden-sm">
+          <div class="aw-mod">
+            <div class="mod-head">
+              <h3>专题</h3>
+            </div>
+            <div class="mod-body">
+              <ul>
+                <li><a href="http://wenda.golaravel.com/feature/1">Composer中国镜像</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="aw-mod aw-text-align-justify">
+            <div class="mod-head">
+              <a href="http://wenda.golaravel.com/topic/channel-hot" class="pull-right">更多 &gt;</a>
+              <h3>热门话题</h3>
+            </div>
+            <div class="mod-body">
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/topic/普京"><img alt="" src="http://wenda.golaravel.com/static/common/topic-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <p class="clearfix">
+                    <span class="topic-tag">
+            <a href="http://wenda.golaravel.com/topic/普京" class="text" data-id="1159">普京</a>
+          </span>
+                  </p>
+                  <p><b>4</b> 个问题, <b>1</b> 人关注</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/topic/学习"><img alt="" src="http://wenda.golaravel.com/static/common/topic-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <p class="clearfix">
+                    <span class="topic-tag">
+            <a href="http://wenda.golaravel.com/topic/学习" class="text" data-id="748">学习</a>
+          </span>
+                  </p>
+                  <p><b>5</b> 个问题, <b>1</b> 人关注</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/topic/Laravel教程"><img alt="" src="http://wenda.golaravel.com/static/common/topic-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <p class="clearfix">
+                    <span class="topic-tag">
+            <a href="http://wenda.golaravel.com/topic/Laravel教程" class="text" data-id="3">Laravel教程</a>
+          </span>
+                  </p>
+                  <p><b>45</b> 个问题, <b>7</b> 人关注</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/topic/redis"><img alt="" src="http://wenda.golaravel.com/static/common/topic-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <p class="clearfix">
+                    <span class="topic-tag">
+            <a href="http://wenda.golaravel.com/topic/redis" class="text" data-id="47">redis</a>
+          </span>
+                  </p>
+                  <p><b>8</b> 个问题, <b>1</b> 人关注</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/topic/api"><img alt="" src="http://wenda.golaravel.com/static/common/topic-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <p class="clearfix">
+                    <span class="topic-tag">
+            <a href="http://wenda.golaravel.com/topic/api" class="text" data-id="131">api</a>
+          </span>
+                  </p>
+                  <p><b>5</b> 个问题, <b>1</b> 人关注</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="aw-mod aw-text-align-justify">
+            <div class="mod-head">
+              <a href="http://wenda.golaravel.com/people/" class="pull-right">更多 &gt;</a>
+              <h3>热门用户</h3>
+            </div>
+            <div class="mod-body">
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/people/%E5%A4%A7%E5%A4%B4"><img alt="" src="http://wenda.golaravel.com/uploads/avatar/000/00/54/59_avatar_mid.jpg" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <a href="http://wenda.golaravel.com/people/%E5%A4%A7%E5%A4%B4" data-id="5459" class="aw-user-name">大头           </a>
+                  <p class="signature"></p>
+                  <p><b>0</b> 个问题, <b>0</b> 次赞同</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/people/onefourtwo"><img alt="" src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <a href="http://wenda.golaravel.com/people/onefourtwo" data-id="5307" class="aw-user-name">onefourtwo           </a>
+                  <p class="signature"></p>
+                  <p><b>0</b> 个问题, <b>0</b> 次赞同</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/people/%E5%B0%8F%E4%B8%91%E8%B7%AF%E4%BA%BA"><img alt="" src="http://wenda.golaravel.com/uploads/avatar/000/00/55/47_avatar_mid.jpg" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <a href="http://wenda.golaravel.com/people/%E5%B0%8F%E4%B8%91%E8%B7%AF%E4%BA%BA" data-id="5547" class="aw-user-name">小丑路人           </a>
+                  <p class="signature"></p>
+                  <p><b>0</b> 个问题, <b>0</b> 次赞同</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/people/%E7%8E%8B%E6%B5%A9%E6%B5%A92"><img alt="" src="http://wenda.golaravel.com/uploads/avatar/000/00/54/08_avatar_mid.jpg" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <a href="http://wenda.golaravel.com/people/%E7%8E%8B%E6%B5%A9%E6%B5%A92" data-id="5408" class="aw-user-name">王浩浩2           </a>
+                  <p class="signature"></p>
+                  <p><b>0</b> 个问题, <b>0</b> 次赞同</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="pull-left aw-border-radius-5">
+                  <a href="http://wenda.golaravel.com/people/Lane"><img alt="" src="http://wenda.golaravel.com/static/common/avatar-mid-img.png" /></a>
+                </dt>
+                <dd class="pull-left">
+                  <a href="http://wenda.golaravel.com/people/Lane" data-id="5607" class="aw-user-name">Lane           </a>
+                  <p class="signature"></p>
+                  <p><b>1</b> 个问题, <b>0</b> 次赞同</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!-- end 侧边栏 -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}
